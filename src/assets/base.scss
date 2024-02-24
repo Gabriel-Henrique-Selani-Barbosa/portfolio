@@ -1,12 +1,11 @@
 body {
     background: #08102F;
     margin: 0;
-    padding: 32px 22px 0;
     font-family: "Rubik", sans-serif;
-    width: 100%;
     width: 100%;
     overflow: hidden;
     overflow-y: auto;
+    padding: 32px 22px 0;
 }
 *{
     list-style: none;
@@ -31,7 +30,7 @@ html {
             width: 100%;
             &:nth-of-type(3) {
                 width: 60%;
-                padding-right: 20px;
+                padding-right: 90px;
                 .aboutme {
                     margin-top: 80px;
                 }
@@ -39,6 +38,22 @@ html {
             &:nth-of-type(4) {
                 width: 40%;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        max-width: 1300px;
+        margin: 0 auto;
+        section {
+            &:nth-child(5) {
+                width: 690px;
+            }
+            &:nth-child(6) {
+                width: 40%;
+                margin-left: auto;
+            }   
         }
     }
 }

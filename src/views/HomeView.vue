@@ -16,8 +16,8 @@
     <language />
     <skills />
     <letsTalk />
-    <footerComponent />
   </main>
+  <footerComponent />
 </template>
 
 <style lang="scss">
