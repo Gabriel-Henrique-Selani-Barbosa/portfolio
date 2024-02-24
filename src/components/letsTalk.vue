@@ -14,22 +14,24 @@
 </script>
 
 <template>
-    <div class="lets-talk">
-        <h4>letsTalk<b>()</b></h4>
-        <ul class="lets-talk__list">
-            <li class="lets-talk__wpp">
-                <a href="" target="_blank">
-                    <i></i> Vamos Conversar
-                </a>
-            </li>
-            <li class="lets-talk__email">
-                <i></i>
-                <span>E-mail:</span>
-                <input :value="email" readonly="readonly">
-                <button @click="copy()"><i></i></button>
-            </li>
-        </ul>
-    </div>
+    <section>
+        <div class="lets-talk">
+            <h4>letsTalk<b>()</b></h4>
+            <ul class="lets-talk__list">
+                <li class="lets-talk__wpp">
+                    <a href="" target="_blank">
+                        <i></i> Vamos Conversar
+                    </a>
+                </li>
+                <li class="lets-talk__email">
+                    <i></i>
+                    <span>E-mail:</span>
+                    <input :value="email" readonly="readonly">
+                    <button @click="copy()"><i></i></button>
+                </li>
+            </ul>
+        </div>
+    </section>
 </template>
 
 <style lang="scss">
@@ -58,7 +60,7 @@
             height: 40px;
             border-radius: 16px;
             border: 1px solid #41B883;
-            margin-top: 20px;
+            margin: 20px 10px 0;
             a {
                 height: 100%;
                 color: #41B883;
@@ -81,7 +83,7 @@
             }
         }
         &__email {
-            margin-top: 20px;
+            margin: 20px 10px 0;
             width: 200px;
             display: grid;
             grid-template-columns: 1fr;
