@@ -3,6 +3,8 @@
   import avatar from '@/components/avatar.vue';
   import aboutme from '@/components/aboutme.vue';
   import skills from '@/components/skills.vue';
+  import language from '@/components/language.vue';
+  import letsTalk from '@/components/letsTalk.vue';
 </script>
 
 <template>
@@ -10,7 +12,9 @@
     <socialMedia />
     <avatar />
     <aboutme />
+    <language />
     <skills />
+    <letsTalk />
   </main>
 </template>
 
