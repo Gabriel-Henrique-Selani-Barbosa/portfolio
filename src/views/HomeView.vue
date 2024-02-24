@@ -5,6 +5,7 @@
   import skills from '@/components/skills.vue';
   import language from '@/components/language.vue';
   import letsTalk from '@/components/letsTalk.vue';
+  import footerComponent from '@/components/footer.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@
     <language />
     <skills />
     <letsTalk />
+    <footerComponent />
   </main>
 </template>
 

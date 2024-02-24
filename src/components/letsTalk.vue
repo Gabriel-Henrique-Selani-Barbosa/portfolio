@@ -2,12 +2,12 @@
     export default {
         data() {
             return {
-                email: String
+                email: 'gabrielbarbosa61@gmail.com'
             }
         },
         methods: {
-            copy(value) {
-                navigator.clipboard.writeText(value);
+            copy() {
+                navigator.clipboard.writeText(this.email);
             }
         }
     }
@@ -25,8 +25,8 @@
             <li class="lets-talk__email">
                 <i></i>
                 <span>E-mail:</span>
-                <input v-model="email" value="gabrielbarbosa61@gmail.com" readonly="readonly">
-                <button @click="copy(email)"><i></i></button>
+                <input :value="email" readonly="readonly">
+                <button @click="copy()"><i></i></button>
             </li>
         </ul>
     </div>
@@ -82,16 +82,17 @@
         }
         &__email {
             margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            width: 200px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 20px 20px 27px 27px;
             i {
                 background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMyLjg1OTQgNS42MDgyM0wzLjczNDM3IDEzLjgxMTRDMy40ODY0NCAxMy44NzkxIDMuMjY1NDQgMTQuMDIxNyAzLjEwMTQ2IDE0LjIxOTZDMi45Mzc0OCAxNC40MTc1IDIuODM4NSAxNC42NjEyIDIuODE4MDEgMTQuOTE3NEMyLjc5NzUxIDE1LjE3MzYgMi44NTY0OSAxNS40Mjk5IDIuOTg2OTIgMTUuNjUxNEMzLjExNzM0IDE1Ljg3MjkgMy4zMTI4NyAxNi4wNDg4IDMuNTQ2ODcgMTYuMTU1MUwxNi45MjE5IDIyLjQ4MzJDMTcuMTgzOSAyMi42MDQ2IDE3LjM5NDMgMjIuODE1IDE3LjUxNTYgMjMuMDc3TDIzLjg0MzcgMzYuNDUyQzIzLjk1MDEgMzYuNjg2IDI0LjEyNiAzNi44ODE1IDI0LjM0NzQgMzcuMDExOUMyNC41Njg5IDM3LjE0MjQgMjQuODI1MiAzNy4yMDEzIDI1LjA4MTQgMzcuMTgwOEMyNS4zMzc2IDM3LjE2MDMgMjUuNTgxMyAzNy4wNjE0IDI1Ljc3OTIgMzYuODk3NEMyNS45NzcxIDM2LjczMzQgMjYuMTE5NyAzNi41MTI0IDI2LjE4NzUgMzYuMjY0NUwzNC4zOTA2IDcuMTM5NDhDMzQuNDUyOCA2LjkyNjk0IDM0LjQ1NjYgNi43MDE2IDM0LjQwMTcgNi40ODcwN0MzNC4zNDY5IDYuMjcyNTMgMzQuMjM1MyA2LjA3NjcxIDM0LjA3ODcgNS45MjAxM0MzMy45MjIxIDUuNzYzNTUgMzMuNzI2MyA1LjY1MTk4IDMzLjUxMTggNS41OTcxQzMzLjI5NzMgNS41NDIyMiAzMy4wNzE5IDUuNTQ2MDcgMzIuODU5NCA1LjYwODIzVjUuNjA4MjNaIiBzdHJva2U9IiM0MUI4ODMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTcuMzI4MSAyMi42NzA5TDI0LjM5MDYgMTUuNjA4NCIgc3Ryb2tlPSIjNDFCODgzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==)no-repeat;
                 background-size: 100%;
                 width: 20px;
                 height: 20px;
                 display: block;
+                margin: 0 auto;
             }
             span {
                 color: #41B883;
@@ -100,6 +101,33 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+            }
+            input {
+                border: none;
+                width: 100%;
+                background: transparent;
+                color: rgba(255, 255, 255, 0.50);
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal
+            }
+            button {
+                appearance: none;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                width: 25px;
+                margin: 0 auto;
+                margin-top: 10px;
+                i {
+                    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3IDIyLjk5OVY0Ljk5OTAySDkiIHN0cm9rZT0iIzQxQjg4MyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yMyA4Ljk5OTAySDVWMjYuOTk5SDIzVjguOTk5MDJaIiBzdHJva2U9IiM0MUI4ODMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K)no-repeat;
+                    background-size: 100%;
+                    width: 25px;
+                    height: 25px;
+                    display: block;
+                }
             }
         }
     }
