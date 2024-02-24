@@ -1,4 +1,5 @@
 <script>
+    import Swal from 'sweetalert2'
     export default {
         data() {
             return {
@@ -8,6 +9,21 @@
         methods: {
             copy() {
                 navigator.clipboard.writeText(this.email);
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "bottom-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: "Copiado com Sucesso"
+                });
             }
         }
     }
