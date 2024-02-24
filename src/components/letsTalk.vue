@@ -35,7 +35,7 @@
             <h4>letsTalk<b>()</b></h4>
             <ul class="lets-talk__list">
                 <li class="lets-talk__wpp">
-                    <a href="" target="_blank">
+                    <a href="https://api.whatsapp.com/send/?phone=16997197835" target="_blank">
                         <i></i> Vamos Conversar
                     </a>
                 </li>
@@ -129,7 +129,12 @@
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: normal
+                line-height: normal;
+                &:hover, &:focus, &:active {
+                    border: none;
+                    box-shadow: none;
+                    outline: none;
+                }
             }
             button {
                 appearance: none;
